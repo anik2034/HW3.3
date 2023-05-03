@@ -1,9 +1,11 @@
 import org.asynchttpclient.uri.Uri;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -32,11 +34,13 @@ public class BaseTest {
     @BeforeClass
     public void setUp() {
         //System.setProperty("webdriver.chrome.drive", "chromedriver.exe");
-        ChromeOptions options = new ChromeOptions();
+       // ChromeOptions options = new ChromeOptions();
        // options.addArguments("--remote-allow-origins=*");
+        ChromeOptions options = new ChromeOptions();
+        options.setCapability("platformName", "WINDOWS");
 
         try {
-            driver = new RemoteWebDriver(new URL("http://192.168.18.9:4444"), options);
+            driver = new RemoteWebDriver(new URL("http://192.168.18.10:4444"), options);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
