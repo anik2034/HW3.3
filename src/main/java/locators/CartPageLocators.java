@@ -1,8 +1,8 @@
 package locators;
 
 public class CartPageLocators {
-    public static String firstInCartCSS = "#cartItemsContainer > div:nth-child(12) > section > div:nth-child(3) > div.row.pt-ss.ml-0.mr-0.mb-xxs > div.col-lg-2.product-list-item.cart-product-image.pl-0.pr-0";
-    public static String firstInCartNameCSS = "#cartItemsContainer > div:nth-child(12) > section > div:nth-child(3) > div:nth-child(1) > h3 > a";
-    public static String priceCSS= "#orderSummary > div > div:nth-child(2) > div > div > div.price";
-    public static String productTypexpath = "/html/body/main/div[3]/section[2]/div[2]/section[1]/div[1]/section/div/div[2]/div[1]/span";
+    public static final String firstInCartxpath = "//*[@id=\"cartItemsContainer\"]/div[1]/section[1]/div[1]/div[2]/div[1]/div/a/img";
+    public static final String firstInCartNamexpath = "//*[@id=\"cartItemsContainer\"]/div[1]/section[1]/div[1]/div[1]/h3/a";
+    public static final String pricexpath = "//*[@id=\"cartItemsContainer\"]/div[1]/section[1]/div[1]/div[2]/div[3]/div[1]/div[3]/span";
+    public static final String productTypexpath = "//*[@id=\"cartItemsContainer\"]/div[1]/section[1]/div[1]/div[2]/div[1]/span";
 }

@@ -6,9 +6,9 @@ import org.openqa.selenium.WebDriver;
 import static locators.CartPageLocators.*;
 
 public class CartPage extends BasePage {
-    private By firstResult = By.cssSelector(firstInCartCSS);
-    private By firstResultName = By.cssSelector(firstInCartNameCSS);
-    private By price = By.cssSelector(priceCSS);
+    private By firstResult = By.xpath(firstInCartxpath);
+    private By firstResultName = By.xpath(firstInCartNamexpath);
+    private By price = By.xpath(pricexpath);
     private By productType = By.xpath(productTypexpath);
 
     public CartPage(WebDriver driver) {

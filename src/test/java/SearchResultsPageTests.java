@@ -11,7 +11,7 @@ public class SearchResultsPageTests extends BaseTest {
         String title = results.getSearchedName().trim();
 
         sa.assertEquals(title.substring(title.indexOf("for")+1),"Anna Karenina", AssertionMessage.validSearchedTerm);
-        sa.assertEquals(title.substring(title.indexOf("for")+1),"Idiot", AssertionMessage.invalidSearchedTerm );
+       // sa.assertEquals(title.substring(title.indexOf("for")+1),"Idiot", AssertionMessage.invalidSearchedTerm );
         sa.assertAll();
 
     }

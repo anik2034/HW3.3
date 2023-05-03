@@ -8,10 +8,10 @@ import static locators.SearchResultPageLocators.*;
 
 public class SearchResultsPage extends BasePage {
 
-    private By firstResult = By.cssSelector(firstResultCSS);
+    private By firstResult = By.xpath(firstResultxpath);
     private By searchedName = By.className(searchedClass);
     private By pechenii = By.xpath(pecheni);
-    private By author = By.cssSelector(authorCSS);
+    private By author = By.xpath(authorxpath);
 
 
     public SearchResultsPage(WebDriver driver) {

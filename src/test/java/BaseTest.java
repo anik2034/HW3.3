@@ -1,8 +1,10 @@
+import org.asynchttpclient.uri.Uri;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -14,6 +16,8 @@ import pages.SearchResultsPage;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
@@ -27,11 +31,15 @@ public class BaseTest {
 
     @BeforeClass
     public void setUp() {
-        System.setProperty("webdriver.chrome.drive", "chromedriver.exe");
+        //System.setProperty("webdriver.chrome.drive", "chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");
+       // options.addArguments("--remote-allow-origins=*");
 
-        driver = new ChromeDriver(options);
+        try {
+            driver = new RemoteWebDriver(new URL("http://192.168.18.9:4444"), options);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
         driver.manage().window().maximize();
 
     }

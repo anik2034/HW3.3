@@ -3,13 +3,13 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import static locators.HomePageLocators.searchBarCSS;
-import static locators.HomePageLocators.searchButtonCSS;
+import static locators.HomePageLocators.searchBarxpath;
+import static locators.HomePageLocators.searchButtonxpath;
 
 public class HomePage extends BasePage{
 
-    private By searchBar = By.cssSelector(searchBarCSS);
-    private By searchButton = By.cssSelector(searchButtonCSS);
+    private By searchBar = By.xpath(searchBarxpath);
+    private By searchButton = By.xpath(searchButtonxpath);
     public HomePage(WebDriver driver) {
         super(driver);
     }

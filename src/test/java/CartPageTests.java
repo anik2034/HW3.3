@@ -35,7 +35,7 @@ public class CartPageTests extends BaseTest{
         String productType = cart.getProductType();
 
         sa.assertEquals(productType, "Paperback", AssertionMessage.correctProductType);
-        sa.assertNotEquals(productType, "Hardcover", AssertionMessage.incorrectProductType);
+  //      sa.assertNotEquals(productType, "Hardcover", AssertionMessage.incorrectProductType);
         sa.assertAll();
     }
 

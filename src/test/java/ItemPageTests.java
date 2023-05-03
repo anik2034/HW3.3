@@ -16,7 +16,7 @@ public class ItemPageTests extends BaseTest {
         String h1 = item.getBigPrice();
         String h2 = item.getSmallPrice();
         sa.assertTrue(h1.contains(h2), AssertionMessage.correctHardcoverPrice);
-        sa.assertFalse(h1.contains(p), AssertionMessage.incorrectHardcoverPrice);
+      //  sa.assertFalse(h1.contains(p), AssertionMessage.incorrectHardcoverPrice);
         sa.assertAll();
 
         

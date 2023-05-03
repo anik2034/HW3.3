@@ -5,19 +5,21 @@ import org.openqa.selenium.WebDriver;
 
 import static locators.ItemPageLocators.*;
 
+
 public class ItemPage extends BasePage{
 
-    private By addToCartButton = By.xpath(addToCartCSS);
+    private By addToCartButton = By.xpath(addToCartxpath);
     private By viewCartButton = By.id(viewCartID);
-    private By hardCoverButton = By.cssSelector(hardcoverCSS);
+    private By hardCoverButton = By.xpath(hardcoverxpath);
     private By itemBigPrice = By.cssSelector(bigPrice);
-    private By itemSmallPrice = By.cssSelector(smallPrice);
+    private By itemSmallPrice = By.xpath(smallPricexpath);
     private By author = By.xpath(authorxpath);
     public ItemPage(WebDriver driver) {
         super(driver);
     }
 
     public String getAuthor(){
+        scrollBy(driver, 0, 100);
         return getText(author);
     }
 

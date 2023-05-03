@@ -1,6 +1,6 @@
 package locators;
 
 public class HomePageLocators {
-    public static String searchBarCSS = "#rhf_header_element > nav > div > div.col-md-12.rhf-logo-bar > form > div > div.rbt.rhf-typeahead-search > div > input.rbt-input-main.form-control.rbt-input";
-    public static String searchButtonCSS = "#rhf_header_element > nav > div > div.col-md-12.rhf-logo-bar > form > div > span > button";
+    public static final String searchBarxpath = "//*[@id=\"rhf_header_element\"]/nav/div/div[3]/form/div/div[2]/div/input[1]";
+    public static final String searchButtonxpath = "//*[@id=\"rhf_header_element\"]/nav/div/div[3]/form/div/span/button";
 }
